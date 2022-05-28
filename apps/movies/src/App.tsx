@@ -1,6 +1,6 @@
-import { useState } from "react";
-
 import { AppShell } from "ui";
+
+import MoviesContent from "./components/MoviesContent";
 
 function App() {
 	return (
@@ -20,7 +20,7 @@ function App() {
 			routes={[
 				{
 					path: "",
-					element: () => <div>Is this home</div>,
+					element: () => <MoviesContent />,
 				},
 				{
 					path: "/playlist",
