@@ -1,4 +1,4 @@
-# Turborepo starter with pnpm
+# Turborepo Module Federation React Router 6
 
 ![example workflow](https://github.com/thomasjonstrup/turborepo-mf-router6/actions/workflows/ci.yml/badge.svg)
 
