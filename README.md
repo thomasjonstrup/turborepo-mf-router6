@@ -1,5 +1,7 @@
 # Turborepo starter with pnpm
 
+![example workflow](https://github.com/thomasjonstrup/turborepo-mf-router6/actions/workflows/ci.yml/badge.svg)
+
 This is an official starter turborepo.
 
 ## What's inside?
