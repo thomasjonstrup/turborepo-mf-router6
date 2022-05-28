@@ -1,0 +1,46 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and Test
+    timeout-minutes: 15
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node-version: [12.x, 14.x, 16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    steps:
+        - name: Check out code
+          uses: actions/checkout@v2
+          with:
+            fetch-depth: 2
+
+        - uses: pnpm/action-setup@v2.0.1
+          with:
+            version: 6.32.2
+
+        - name: Setup Node.js enviroment Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v3
+          with:
+            node-version: ${{ matrix.node-version }}
+            cache: 'pnpm'
+
+        - name: Install dependencies
+          run: pnpm install
+
+        - name: Build
+          run: pnpm build
+
+        - name: Test
+          run: pnpm test
