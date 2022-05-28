@@ -14,9 +14,10 @@ export const MovieCard: React.FunctionComponent<{
 	title: string;
 	image: string;
 	showAddButton?: boolean;
-}> = ({ title, image, showAddButton }) => {
+	showRemoveButton?: boolean;
+}> = ({ title, image, showAddButton, showRemoveButton }) => {
 	const theme = useMantineTheme();
-	const { addMovie } = useStore();
+	const { addMovie, removeMovie } = useStore();
 	return (
 		<Card shadow="sm" p="lg">
 			<Card.Section>
@@ -39,6 +40,17 @@ export const MovieCard: React.FunctionComponent<{
 					onClick={() => addMovie({ title, image })}
 				>
 					Add to list
+				</Button>
+			)}
+			{showRemoveButton && (
+				<Button
+					variant="light"
+					color="blue"
+					fullWidth
+					style={{ marginTop: 14 }}
+					onClick={() => removeMovie(title)}
+				>
+					Remove from list
 				</Button>
 			)}
 		</Card>

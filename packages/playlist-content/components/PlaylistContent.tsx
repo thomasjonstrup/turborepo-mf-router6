@@ -14,7 +14,7 @@ export const PlayList = () => {
 			</Box>
 			<Grid mt={20} sx={{ gap: "1rem" }}>
 				{movies.map((movie) => (
-					<MovieCard {...movie} key={movie.title} />
+					<MovieCard {...movie} key={movie.title} showRemoveButton />
 				))}
 			</Grid>
 		</>
