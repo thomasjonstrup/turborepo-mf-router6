@@ -112,5 +112,3 @@ export const AppShell: React.FunctionComponent<{
 		</BrowserRouter>
 	);
 };
-
-export * from "./Button";

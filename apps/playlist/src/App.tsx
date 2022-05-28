@@ -6,8 +6,8 @@ import { PlayList } from "playlist-content";
 function App() {
 	return (
 		<AppShell
-			title="Movies"
-			colorScheme="light"
+			title="Playlist"
+			colorScheme="dark"
 			navLinks={[
 				{
 					label: "Home",

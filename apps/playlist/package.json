@@ -1,5 +1,5 @@
 {
-	"name": "movies",
+	"name": "playlist",
 	"private": true,
 	"version": "0.0.0",
 	"scripts": {
@@ -20,6 +20,7 @@
 		"card": "workspace:*",
 		"movies-content": "workspace:*",
 		"playlist-content": "workspace:*",
+		"store": "workspace:*",
 		"tsconfig": "workspace:*",
 		"typescript": "^4.6.3",
 		"ui": "workspace:*",

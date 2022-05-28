@@ -18,6 +18,8 @@ importers:
       '@types/react-dom': ^18.0.0
       '@vitejs/plugin-react': ^1.3.0
       card: workspace:*
+      movies-content: workspace:*
+      playlist-content: workspace:*
       react: ^18.0.0
       react-dom: ^18.0.0
       tsconfig: workspace:*
@@ -34,6 +36,43 @@ importers:
       '@types/react-dom': 18.0.5
       '@vitejs/plugin-react': 1.3.2
       card: link:../../packages/card
+      movies-content: link:../../packages/movies-content
+      playlist-content: link:../../packages/playlist-content
+      tsconfig: link:../../packages/tsconfig
+      typescript: 4.7.2
+      ui: link:../../packages/ui
+      vite: 2.9.9
+
+  apps/playlist:
+    specifiers:
+      '@mantine/core': ^4.2.6
+      '@mantine/hooks': ^4.2.6
+      '@types/react': ^18.0.0
+      '@types/react-dom': ^18.0.0
+      '@vitejs/plugin-react': ^1.3.0
+      card: workspace:*
+      movies-content: workspace:*
+      playlist-content: workspace:*
+      react: ^18.0.0
+      react-dom: ^18.0.0
+      store: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.6.3
+      ui: workspace:*
+      vite: ^2.9.9
+    dependencies:
+      '@mantine/core': 4.2.6_4aq3fijiwcnee2kgs4oyh3fbtq
+      '@mantine/hooks': 4.2.6_react@18.1.0
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    devDependencies:
+      '@types/react': 18.0.9
+      '@types/react-dom': 18.0.5
+      '@vitejs/plugin-react': 1.3.2
+      card: link:../../packages/card
+      movies-content: link:../../packages/movies-content
+      playlist-content: link:../../packages/playlist-content
+      store: link:../../packages/store
       tsconfig: link:../../packages/tsconfig
       typescript: 4.7.2
       ui: link:../../packages/ui
@@ -73,6 +112,64 @@ importers:
       eslint-config-next: 12.1.6
       eslint-config-prettier: 8.5.0
       eslint-plugin-react: 7.28.0
+
+  packages/movies-content:
+    specifiers:
+      '@mantine/core': ^4.2.6
+      '@mantine/hooks': ^4.2.6
+      '@types/react': ^18.0.9
+      '@types/react-dom': ^18.0.5
+      card: workspace:*
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.1.0
+      react-router-dom: ^6.3.0
+      store: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    dependencies:
+      '@mantine/core': 4.2.6_jkwx5tgufppux3ftiszr3x2lf4
+      '@mantine/hooks': 4.2.6_react@18.1.0
+      react-router-dom: 6.3.0_react@18.1.0
+    devDependencies:
+      '@types/react': 18.0.9
+      '@types/react-dom': 18.0.5
+      card: link:../card
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-acme
+      react: 18.1.0
+      store: link:../store
+      tsconfig: link:../tsconfig
+      typescript: 4.7.2
+
+  packages/playlist-content:
+    specifiers:
+      '@mantine/core': ^4.2.6
+      '@mantine/hooks': ^4.2.6
+      '@types/react': ^18.0.9
+      '@types/react-dom': ^18.0.5
+      card: workspace:*
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.1.0
+      react-router-dom: ^6.3.0
+      store: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    dependencies:
+      '@mantine/core': 4.2.6_jkwx5tgufppux3ftiszr3x2lf4
+      '@mantine/hooks': 4.2.6_react@18.1.0
+      react-router-dom: 6.3.0_react@18.1.0
+    devDependencies:
+      '@types/react': 18.0.9
+      '@types/react-dom': 18.0.5
+      card: link:../card
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-acme
+      react: 18.1.0
+      store: link:../store
+      tsconfig: link:../tsconfig
+      typescript: 4.7.2
 
   packages/store:
     specifiers:
